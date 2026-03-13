@@ -7,7 +7,7 @@ import { handleMorningNotification } from "./cron";
 const app = new Hono<{ Bindings: Bindings }>();
 
 app.get("/", (c) => {
-  return c.text("スケジューラーくん 動作中!");
+  return c.text("AI秘書 動作中!");
 });
 
 app.post("/webhook", async (c) => {
