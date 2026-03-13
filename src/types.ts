@@ -1,0 +1,12 @@
+export type Bindings = {
+  LINE_CHANNEL_SECRET: string;
+  LINE_CHANNEL_ACCESS_TOKEN: string;
+  ANTHROPIC_API_KEY: string;
+  GOOGLE_CLIENT_ID: string;
+  GOOGLE_CLIENT_SECRET: string;
+  GOOGLE_REFRESH_TOKEN_WORK: string;
+  GOOGLE_REFRESH_TOKEN_PRIVATE: string;
+  LINE_USER_ID: string;
+  CHAT_HISTORY: KVNamespace;
+  USER_NAME: string;
+};
