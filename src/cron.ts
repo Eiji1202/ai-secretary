@@ -3,7 +3,6 @@ import { getTodayEvents } from "./google-calendar";
 import { pushMessages } from "./line";
 import { getWeather, Location } from "./weather";
 import { getHackerNewsTop, getEconomyNews } from "./news";
-import { SYSTEM_PROMPT } from "./claude";
 
 export async function handleMorningNotification(env: Bindings): Promise<void> {
   const now = new Date().toLocaleDateString("ja-JP", {
@@ -41,9 +40,9 @@ export async function handleMorningNotification(env: Bindings): Promise<void> {
 
   // 3つのメッセージに分けて送信
   const msg1 =
-    `${SYSTEM_PROMPT(env.USER_NAME)}おはよう！\n\n${now}\n\n${weatherMessage}\n\n` +
+    `${env.USER_NAME}おはよう〜！\n\n${now}\n\n${weatherMessage}\n\n` +
     (allEvents.length === 0
-      ? "今日の予定はないよ！ゆっくりできるじゃん"
+      ? "今日の予定はないよ！自分時間を最大限に有効活用しようね！"
       : `今日の予定（${allEvents.length}件）\n` +
         allEvents
           .map((e: any) => {
