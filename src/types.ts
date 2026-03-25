@@ -9,4 +9,6 @@ export type Bindings = {
   LINE_USER_ID: string;
   CHAT_HISTORY: KVNamespace;
   USER_NAME: string;
+  RAKUTEN_APPLICATION_ID: string;
+  RAKUTEN_ACCESS_KEY: string;
 };

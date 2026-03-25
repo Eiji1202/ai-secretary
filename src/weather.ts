@@ -1,9 +1,4 @@
-// デフォルトは岐阜県
-const DEFAULT_LOCATION = {
-  name: "岐阜県",
-  latitude: 35.3912,
-  longitude: 136.7223,
-};
+import { DEFAULT_LOCATION } from './constants'
 
 export type Location = {
   name: string;
